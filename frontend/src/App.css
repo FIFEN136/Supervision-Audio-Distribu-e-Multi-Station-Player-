@@ -1,0 +1,169 @@
+/* GLOBAL */
+.App {
+  text-align: center;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  color: #e2e8f0;
+}
+
+/* HEADER */
+.App-header {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  color: #38bdf8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* GRID STABLE (Empêche les sauts d'images) */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  justify-items: center;
+}
+
+/* CARD */
+.player-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* HEADER DE LA CARTE (Point + Titre) */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+/* POINT DE STATUT (Le cœur de ta demande) */
+.status-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ÉTAT : ALLUMÉ (VERT STABLE) */
+.player-card.online {
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.player-card.online .status-dot {
+  background-color: #22c55e; /* Vert stable */
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+}
+
+/* ÉTAT : ARRÊTÉ (ROUGE STABLE) */
+.player-card.offline {
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  opacity: 0.8;
+}
+
+.player-card.offline .status-dot {
+  background-color: #ef4444; /* Rouge stable */
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+}
+
+/* CONTROLS */
+.controls {
+  margin-top: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.controls label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+  cursor: pointer;
+}
+
+/* VOLUME SLIDER */
+.vol-slider {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.vol-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #38bdf8;
+  cursor: pointer;
+}
+
+/* TEXTES */
+.track-info {
+  font-weight: 500;
+  color: #f1f5f9;
+  min-height: 1.2em;
+}
+
+.ping {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* LOADING SCREEN */
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(56, 189, 248, 0.1);
+  border-left-color: #38bdf8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
