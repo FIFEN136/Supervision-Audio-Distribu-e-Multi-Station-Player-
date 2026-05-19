@@ -167,3 +167,243 @@ input[type="range"] {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+
+.global-controls {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #3b82f6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sync-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.stop-all-btn {
+    background-color: #ef4444;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+  
+  
+  
+/* --- POLICE FUTURISTE --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+
+:root {
+    --neon-blue: #00f2ff;
+    --neon-purple: #bc13fe;
+    --dark-void: #050505;
+    --glass-bg: rgba(10, 10, 20, 0.85);
+}
+
+body {
+    background: var(--dark-void);
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(0, 242, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(188, 19, 254, 0.05) 0%, transparent 40%);
+    color: #e0e0e0;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 30px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+
+body {
+  background: #050508;
+  color: #e0e0e0;
+  font-family: 'Rajdhani', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #050508 100%);
+}
+
+.glitch-text {
+  font-family: 'Orbitron', sans-serif;
+  color: #00f2ff;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+  letter-spacing: 4px;
+}
+
+/* PANNEAUX CYBER */
+.cyber-panel {
+  background: rgba(15, 15, 25, 0.8);
+  border: 1px solid rgba(0, 242, 255, 0.2);
+  backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.panel-header {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 242, 255, 0.05);
+}
+
+.panel-header h2 { font-size: 1rem; margin: 0; color: #00f2ff; letter-spacing: 1px; }
+
+/* BOUTONS GLOBAUX */
+.global-controls-zone { border: 1px solid #bc13fe !important; padding: 15px; text-align: center; }
+.global-buttons { display: flex; gap: 20px; justify-content: center; margin-top: 10px; }
+
+.sync-btn, .stop-all-btn {
+  font-family: 'Orbitron';
+  padding: 10px 25px;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.sync-btn { border: 1px solid #00f2ff; color: #00f2ff; }
+.sync-btn:hover { background: #00f2ff; color: #000; box-shadow: 0 0 20px #00f2ff; }
+
+.stop-all-btn { border: 1px solid #ff0000; color: #ff0000; }
+.stop-all-btn:hover { background: #ff0000; color: #fff; box-shadow: 0 0 20px #ff0000; }
+
+/* LED INDICATORS */
+.led-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.led-on {
+  background: #11ff00;
+  box-shadow: 0 0 15px #11ff00, inset 0 0 4px #fff;
+  animation: blink 2s infinite;
+}
+
+.led-off {
+  background: #ff0000;
+  box-shadow: 0 0 10px #ff0000, inset 0 0 4px #fff;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+/* GRILLE & CARTES */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.player-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.player-card.online { border-top: 3px solid #11ff00; }
+.player-card.offline { border-top: 3px solid #ff0000; opacity: 0.8; }
+
+.track-display {
+  background: #000;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #00f2ff;
+  border-left: 2px solid #00f2ff;
+}
+
+.ping-display {
+  font-size: 0.75rem;
+  color: #666;
+  font-family: monospace;
+}
+
+/* TABLEAU */
+.cyber-table { width: 100%; border-collapse: collapse; }
+.cyber-table th { text-align: left; color: #bc13fe; padding: 10px; border-bottom: 1px solid #333; }
+.cyber-table td { padding: 10px; border-bottom: 1px solid #1a1a1a; }
+.neon-txt { color: #00f2ff; font-weight: bold; }
+
+.text-green { color: #11ff00; }
+.text-red { color: #ff0000; }
+
+input[type="range"] { accent-color: #00f2ff; }
+select, input[type="time"] {
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 8px;
+}
+
+/* --- LIGNES DE PLANNING --- */
+
+/* Ligne Active (Futur) */
+.row-active {
+  background: rgba(0, 242, 255, 0.02);
+  border-left: 3px solid #11ff00;
+}
+
+.badge-active {
+  color: #11ff00;
+  text-shadow: 0 0 10px rgba(17, 255, 0, 0.5);
+  font-weight: bold;
+}
+
+/* Ligne Inactive (Passée) */
+.row-inactive {
+  opacity: 0.4;             /* Rend la ligne translucide */
+  filter: grayscale(0.9);   /* Enlève les couleurs */
+  background: rgba(255, 255, 255, 0.01);
+  transition: opacity 0.3s;
+}
+
+.row-inactive:hover {
+  opacity: 0.8;             /* Devient plus visible au survol pour vérification */
+  filter: grayscale(0.5);
+}
+
+.badge-inactive {
+  color: #888;
+  border: 1px solid #444;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Style pour la barre de volume dans le tableau */
+.table-vol {
+  width: 100px;
+  height: 10px;
+  background: #222;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.table-vol-fill {
+  height: 100%;
+  background: #00f2ff;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #00f2ff;
+}
+
+.table-vol span {
+  position: absolute;
+  right: -35px;
+  font-size: 0.7rem;
+}
+
+
