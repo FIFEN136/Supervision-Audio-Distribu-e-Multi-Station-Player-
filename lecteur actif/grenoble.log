@@ -1,0 +1,4 @@
+[src/libmpg123/layer3.c:INT123_do_layer3():1801] error: dequantization failed!
+Note: Illegal Audio-MPEG-Header 0xe5d9969a at offset 270900.
+Note: Trying to resync...
+Note: Skipped 57 bytes in input.
